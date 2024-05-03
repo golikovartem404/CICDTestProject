@@ -12,10 +12,11 @@
 		80481ACE2BE4AC6C00017B5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80481ACD2BE4AC6C00017B5B /* ViewController.swift */; };
 		80481AD32BE4AC6D00017B5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80481AD22BE4AC6D00017B5B /* Assets.xcassets */; };
 		80481AD62BE4AC6D00017B5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80481AD42BE4AC6D00017B5B /* LaunchScreen.storyboard */; };
+		80481ADF2BE4F1BD00017B5B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 80481ADE2BE4F1BD00017B5B /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		80481AC62BE4AC6C00017B5B /* CICDTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CICDTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80481AC62BE4AC6C00017B5B /* CICD Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CICD Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80481AC92BE4AC6C00017B5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80481ACB2BE4AC6C00017B5B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		80481ACD2BE4AC6C00017B5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80481ADF2BE4F1BD00017B5B /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,7 +48,7 @@
 		80481AC72BE4AC6C00017B5B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				80481AC62BE4AC6C00017B5B /* CICDTestProject.app */,
+				80481AC62BE4AC6C00017B5B /* CICD Test.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,8 +82,11 @@
 			dependencies = (
 			);
 			name = CICDTestProject;
+			packageProductDependencies = (
+				80481ADE2BE4F1BD00017B5B /* SnapKit */,
+			);
 			productName = CICDTestProject;
-			productReference = 80481AC62BE4AC6C00017B5B /* CICDTestProject.app */;
+			productReference = 80481AC62BE4AC6C00017B5B /* CICD Test.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,6 +113,9 @@
 				Base,
 			);
 			mainGroup = 80481ABD2BE4AC6C00017B5B;
+			packageReferences = (
+				80481ADD2BE4F1BD00017B5B /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 80481AC72BE4AC6C00017B5B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -293,7 +301,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.artem-golikov.devteam.CICDTestProject";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "CICD Test";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -320,7 +328,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.artem-golikov.devteam.CICDTestProject";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "CICD Test";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -349,6 +357,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		80481ADD2BE4F1BD00017B5B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		80481ADE2BE4F1BD00017B5B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80481ADD2BE4F1BD00017B5B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 80481ABE2BE4AC6C00017B5B /* Project object */;
 }
