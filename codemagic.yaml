@@ -1,5 +1,50 @@
 workflows:
-    sample-workflow:
-        name: Codemagic Sample Workflow
+    CICDTestProject-workflow:
+        name: CICDTestProject Sample Workflow
         max_build_duration: 120
         instance_type: mac_mini_m1
+    integrations:
+        app_store_connect: codemagic
+    environment:
+        ios_signing:
+            distribution_type: app_store
+            bundle_identifier: com.artem-golikov.devteam.CICDTestProject
+    vars:
+        BUNDLE_ID: "com.artem-golikov.devteam.CICDTestProject"
+        XCODE_PROJECT: "CICDTestProject.xcodeproj"
+        XCODE_SCHEME: "CICDTestProject"
+        APP_STORE_APPLE_ID: 6502181679
+    xcode: "15.2.0"
+    scripts:
+      - name: Set up provisioning profiles settings for Xcode project
+        script: xcode-project use-profiles
+      - name: Increment build number
+        script: |
+          cd $CM_BUILD_DIR
+          LATEST_BUILD_NUMBER=$(app-store-connect get-latest-app-store-build-number "$APP_STORE_APPLE_ID")
+          agvtool new-version -all $(($LATEST_BUILD_NUMBER + 1))
+      - name: Build ipa for distribution
+        script: |
+          xcode-project build-ipa \
+            --project "$CM_BUILD_DIR/$XCODE_PROJECT" \
+            --scheme "$XCODE_SCHEME"
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+    publishing:
+      email:
+        recipients:
+          - golikovartyom200@gmail.com
+          - golikovartem404@gmail.com
+        notify:
+          success: true
+          failure: true
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true
+        beta_groups:
+          - Testers
+        submit_to_app_store: false
+        
