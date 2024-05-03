@@ -6,7 +6,7 @@ workflows:
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier:
+        bundle_identifier: com.artem-golikov.devteam.CICDTestProject
     vars:
         BUNDLE_ID: com.artem-golikov.devteam.CICDTestProject
         XCODE_PROJECT: "CICDTestProject.xcodeproj"
