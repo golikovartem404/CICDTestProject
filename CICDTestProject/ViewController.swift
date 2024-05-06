@@ -30,7 +30,7 @@ class ViewController: UIViewController {
             label.text = Keys.APIKey1
         }
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 28, weight: .black)
+        label.font = UIFont.systemFont(ofSize: 26, weight: .semibold)
         label.textAlignment = .center
         label.numberOfLines = 2
         return label
@@ -75,7 +75,7 @@ class ViewController: UIViewController {
         keyLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(welcomeLabel.snp.bottom).offset(40)
-            $0.width.equalToSuperview().multipliedBy(0.7)
+            $0.width.equalToSuperview().multipliedBy(0.85)
         }
         
         environmentLabel.snp.makeConstraints {
