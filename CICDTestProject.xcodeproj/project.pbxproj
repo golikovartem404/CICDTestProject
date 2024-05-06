@@ -14,6 +14,7 @@
 		80481AD62BE4AC6D00017B5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80481AD42BE4AC6D00017B5B /* LaunchScreen.storyboard */; };
 		80481ADF2BE4F1BD00017B5B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 80481ADE2BE4F1BD00017B5B /* SnapKit */; };
 		80FFD9A02BE89EAA0019821B /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FFD99F2BE89EAA0019821B /* Keys.swift */; };
+		80FFD9A22BE8B63E0019821B /* UIColor + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FFD9A12BE8B63E0019821B /* UIColor + Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		80481AD52BE4AC6D00017B5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80481AD72BE4AC6D00017B5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80FFD99F2BE89EAA0019821B /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		80FFD9A12BE8B63E0019821B /* UIColor + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				80481AD42BE4AC6D00017B5B /* LaunchScreen.storyboard */,
 				80481AD72BE4AC6D00017B5B /* Info.plist */,
 				80FFD99F2BE89EAA0019821B /* Keys.swift */,
+				80FFD9A12BE8B63E0019821B /* UIColor + Ext.swift */,
 			);
 			path = CICDTestProject;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			files = (
 				80481ACE2BE4AC6C00017B5B /* ViewController.swift in Sources */,
 				80FFD9A02BE89EAA0019821B /* Keys.swift in Sources */,
+				80FFD9A22BE8B63E0019821B /* UIColor + Ext.swift in Sources */,
 				80481ACA2BE4AC6C00017B5B /* AppDelegate.swift in Sources */,
 				80481ACC2BE4AC6C00017B5B /* SceneDelegate.swift in Sources */,
 			);

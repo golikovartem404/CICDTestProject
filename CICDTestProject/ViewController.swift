@@ -45,6 +45,16 @@ class ViewController: UIViewController {
         label.numberOfLines = 2
         return label
     }()
+    
+    private lazy var buttonLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Open new screen"
+        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        label.textAlignment = .center
+        label.numberOfLines = 1
+        return label
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,13 +66,14 @@ class ViewController: UIViewController {
     // MARK: - Setups
     
     private func setupView() {
-        view.backgroundColor = .systemYellow
+        view.backgroundColor = UIColor(hexString: "#ffcf40")
     }
     
     private func setupHierarchy() {
         view.addSubview(welcomeLabel)
         view.addSubview(keyLabel)
         view.addSubview(environmentLabel)
+        view.addSubview(buttonLabel)
     }
     
     private func setupLayout() {
@@ -81,6 +92,12 @@ class ViewController: UIViewController {
         environmentLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            $0.width.equalToSuperview().multipliedBy(0.7)
+        }
+        
+        buttonLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
             $0.width.equalToSuperview().multipliedBy(0.7)
         }
     }
