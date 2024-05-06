@@ -11,4 +11,5 @@ struct Keys {
     static let APIKey1 = "54-bkjg-6874-bmna-32"
     static let APIKey2 = "asfk4389275gfb59091n"
     static let APIKey3 = "57-abfgf-4785bbskhgdf-4682"
+    static let APIKey4 = "abc-123-def-456"
 }
