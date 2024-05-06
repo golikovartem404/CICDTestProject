@@ -21,6 +21,16 @@ class ViewController: UIViewController {
         label.numberOfLines = 2
         return label
     }()
+    
+    private lazy var keyLabel: UILabel = {
+        let label = UILabel()
+        label.text = Keys.APIKey1
+        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 28, weight: .black)
+        label.textAlignment = .center
+        label.numberOfLines = 2
+        return label
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,11 +47,18 @@ class ViewController: UIViewController {
     
     private func setupHierarchy() {
         view.addSubview(welcomeLabel)
+        view.addSubview(keyLabel)
     }
     
     private func setupLayout() {
         welcomeLabel.snp.makeConstraints {
             $0.center.equalToSuperview()
+            $0.width.equalToSuperview().multipliedBy(0.7)
+        }
+        
+        keyLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(welcomeLabel.snp.bottom).offset(40)
             $0.width.equalToSuperview().multipliedBy(0.7)
         }
     }
